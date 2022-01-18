@@ -1,4 +1,10 @@
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import {
+	BrowserRouter,
+	Navigate,
+	NavLink,
+	Route,
+	Routes
+} from 'react-router-dom';
 import './App.css';
 import About from './Pages/About';
 import Article from './Pages/Article';
@@ -20,6 +26,7 @@ function App() {
 					<Route path="/about" element={<About />}></Route>
 					<Route path="/contact" element={<Contact />}></Route>
 					<Route path="/articles/:id" element={<Article />}></Route>
+					<Route path="*" element={<Navigate to="/" />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
